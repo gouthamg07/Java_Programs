@@ -1,0 +1,32 @@
+//first n natural numbers
+
+package javaapplication26;
+
+import java.util.Scanner;
+
+public class JavaApplication26 {
+
+
+    public static void main(String[] args) 
+    {
+        System.out.println("enter the number ");
+        Scanner sc = new Scanner(System.in);
+        int num = sc.nextInt();
+     
+     
+       /* for(int i=num;i>0;i--)
+            sum += i;
+        System.out.println(sum);
+       */
+        //using while 
+      int sum = 0 ;
+        while(num>0)
+        {
+            sum+=num;
+            System.out.println(sum);//this gives calculation of every step bcoz its inside the loop
+            num--;
+        }
+         System.out.println(sum);//this gives answer directly 55
+    }
+ }
+    

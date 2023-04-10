@@ -1,0 +1,60 @@
+
+package javaapplication26;
+
+import java.util.Scanner;
+
+
+public class JavaApplication26 {
+
+
+    public static void main(String[] args) {
+    Scanner sc = new Scanner(System.in);
+    System.out.println("enter the two numbers");
+    int num1 = sc.nextInt();
+    int num2 = sc.nextInt();
+
+    System.out.println("sum of "+ num1 +" and "+ num2 + " is " + (add(num1,num2)));
+    System.out.println("sub of "+ num1 +" and "+ num2 + " is " + (sub(num1,num2)));
+    System.out.println("mul of "+ num1 +" and "+ num2 + " is " + (mul(num1,num2)));
+    System.out.println("div of "+ num1 +" and "+ num2 + " is " + (div(num1,num2)));
+    System.out.println("power of "+ num1 +" and "+ num2 + " is " + (power(num1,num2)));
+    System.out.println("modulus of "+ num1 +" and "+ num2 + " is " + (modulus(num1,num2)));
+    
+    
+    }+
+
+    static int add( int x,int y)
+    {
+        int res = x+y;
+        return res; 
+    }
+        static int sub( int x,int y)
+    {
+       int res = x-y;
+        return res; 
+    }   
+        static int mul( int x,int y)
+    {
+        int res = x*y;
+        return res; 
+    }    
+        static int div( int x,int y)
+    {
+        int res = x/y;
+        return res; 
+    }
+        static double power( int x,int y)
+    {
+        double res = Math.pow(x,y);
+        return res; 
+    }
+            
+      static int modulus( int x,int y)
+    {
+        int sum ;
+        int res = x%y;
+        return res; 
+    }
+        
+}
+    

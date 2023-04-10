@@ -1,0 +1,28 @@
+//binary to decimal
+package javaapplication1;
+import java.util.Scanner;
+public class JavaApplication1 
+{
+    public static void main (String[] args)
+    {
+    Scanner sc = new Scanner(System.in);
+    System.out.println("enter  the binary number");
+    String binary = sc.nextLine();
+    int base =2;
+    /* method 1 coding 
+    long num = binary;
+    int ans =0,i=0;
+    while(num!=0)
+    {
+    int digit =(int) num%10;
+    ans = (int) ((int) ans + (digit*Math.pow(2, i)));
+    num /=10;
+    i++;
+    }
+    System.out.println(ans);
+    */
+   //method 2 ...inbuilt function...
+    System.out.println(Integer.parseInt(binary,base));
+ }
+}
+

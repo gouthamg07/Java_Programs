@@ -1,0 +1,38 @@
+/*                                   Problem statement
+Write a program to create an interface of an MCQ, 
+ask the user for the option of his choice as an integer and print the option that he has selected.
+Options are marked from 1 to 4 any other integer input should be printed as invalid
+*/
+package javaapplication26;
+
+import java.util.Scanner;
+
+
+public class JavaApplication26 {
+
+
+    public static void main(String[] args) {
+    Scanner sc = new Scanner(System.in);
+    System.out.println("enter the option");
+    int option = sc.nextInt();
+    switch(option)
+    {
+        case 1 :
+            System.out.println("option one selected");
+            break;
+        case 2 :
+            System.out.println("option two selected");
+            break;
+        case 3 :
+            System.out.println("option three selected");
+            break;
+        case 4 :
+            System.out.println("option four selected");
+            break;
+        default :
+            System.out.println("invalid");
+            break;
+        }
+  }
+ }
+    

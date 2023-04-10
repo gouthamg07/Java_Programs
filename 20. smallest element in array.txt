@@ -1,0 +1,25 @@
+
+package javaapplication1;
+import java.util.Scanner;
+public class JavaApplication1 
+{
+   public static void main (String[] args)
+    {
+    int [] arr = {21,91,73,89,23,21,2} ;
+    int min = arr[0];
+    int len = arr.length;
+    for(int i = 1;i<len;i++)
+    {
+    if(arr[i]<min)
+    {
+      min = arr[i];
+    }
+    }
+    System.out.println("minimum element is "+min);
+    
+    
+}
+}
+    
+
+

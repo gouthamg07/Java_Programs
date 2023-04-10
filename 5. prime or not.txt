@@ -1,0 +1,135 @@
+//first n natural numbers
+
+package javaapplication26;
+
+import java.util.Scanner;
+
+
+public class JavaApplication26 {
+
+
+    public static void main(String[] args) 
+    {
+       Scanner sc = new Scanner(System.in);
+       System.out.println("enter the number");
+       int num = sc.nextInt();
+       //method 1 ......prime means divide by 1 and itself only two factors... so count should be only two.
+       /*
+       int count = 0;
+       for (int i=1;i<=num;i++)
+       {
+       if(num%i==0)
+           count++;
+       }
+       if(count==2)
+           System.out.println(num+ " is prime");
+       else
+           System.out.println(num+ " is not prime");
+       */
+       //method 1 ends here
+       
+       //method 2 ....0's and 1's are not prime....
+       /*
+        int count = 0;
+       for (int i=1;i<=num;i++)
+       {
+       if(num%i==0)
+           count++;
+       }
+      if(num==0||num==1)
+          System.out.println(num+ " is not prime");
+      else if(count>2)
+          System.out.println(num+ " is not prime");
+      else 
+           System.out.println(num+ " is prime");
+      */
+      //method 2 ends here
+      
+       
+       // method 3 starts ....negative numbers is not a prime for eg 23 is prime when positive but -23 is not a prime. 
+       //in method two it shows -23 as prime (prime numbers are always positive)......
+       /*
+       int count = 0;
+       for (int i=1;i<=num;i++)
+       {
+       if(num%i==0)
+           count++;
+       }
+       if(num < 0 || count>2)
+           System.out.println(num+ " is not prime");
+       else
+           System.out.println(num+ " is prime");
+       */
+       
+       //method 4 .....here we use flag and loop starts with 2 to n-1
+       
+       /*
+               boolean flag = true;
+       if(num<2)
+           flag = false;
+       else 
+           for(int i = 2;i<num;i++)
+           {
+               if(num%i==0)
+                   flag = false;
+                   break; // bcoz one number divides also it is not prime  
+           }
+       String res = (flag == false)? "not prime":"prime";
+       System.out.println(res);
+         */
+       //method 5 ....for loop runs only half the number
+       
+               boolean flag = true;
+       if(num<2)
+           flag = false;
+       else 
+           for(int i = 2;i<num/2;i++)
+           {
+               if(num%i==0)
+                   flag = false;
+                   break; // bcoz one number divides also it is not prime  
+           }
+       String res = (flag == false)? "not prime":"prime";
+       System.out.println(res);
+       }
+    
+ }
+    --------------------------------------------------------------------------------------------------------------------------
+//better method
+package javaapplication26;
+
+import java.util.Scanner;
+
+public class JavaApplication26 
+{
+        public static void main(String[] args) {
+    Scanner sc = new Scanner(System.in);
+    System.out.println("enter the lowest number");
+    int low = sc.nextInt();
+            //System.out.println("enter the largest number ");
+            //int high = sc.nextInt();
+            boolean ans = isprime(low);
+            if(ans == true)
+                System.out.println("prime");
+            else
+                System.out.println("not prime");
+
+    
+  }
+    static boolean isprime(int x)
+    {
+    if(x<=1) 
+        return false;
+    else if(x==2)
+        return true;
+    else if(x%2==0)
+        return false;
+    else 
+        for(int i=3;i<=Math.sqrt(x);i+=2)
+        {
+            if(i%2==0)
+                return false;
+        }
+            return true;
+    }
+}

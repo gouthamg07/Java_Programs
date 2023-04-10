@@ -1,0 +1,4 @@
+Scanner sc = new Scanner(System.in);
+         BigInteger n = new BigInteger(sc.next());
+       System.out.print(n.isProbablePrime(10)? "prime":"not prime");
+        

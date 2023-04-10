@@ -1,0 +1,31 @@
+package javaapplication26;
+
+import java.util.Scanner;
+
+public class JavaApplication26 
+{
+     public static void main(String[] args)
+     {
+     Scanner sc  =new Scanner(System.in);
+     int arr[]={1,2,4,3,2,3,4,3,4,6,5,3};
+     System.out.println(arr);
+     System.out.println("enter the value you need to find its index");
+     int value = sc.nextInt();
+     int size = arr.length;
+     int i=0;
+     System.out.println(index(value,arr,size,i));
+
+     }
+     static int index(int value,int[] arr,int size,int i)
+     {
+   
+      if(i==size)
+          return -1;
+      if(arr[i]==value)
+      {
+          return i;
+        
+      }   
+      return index(value,arr,size,i+1);
+     }
+}

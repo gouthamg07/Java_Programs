@@ -1,0 +1,37 @@
+
+package javaapplication26;
+
+import java.util.Scanner;
+
+
+public class JavaApplication26 {
+
+
+    public static void main(String[] args) {
+    Scanner sc = new Scanner(System.in);
+    System.out.println("enter the marks");
+    int marks = sc.nextInt();
+    if(marks <0 || marks >100 )
+    {
+        System.out.println("invalid");
+    }
+    else if(marks >=50 && marks <65)
+    {
+        System.out.println("grade c");
+    }
+    else if(marks >=65 && marks <79)
+    {
+        System.out.println("grade b");
+    }
+    else if(marks >=80 && marks <89)
+    {
+        System.out.println("grade a");
+    }
+    else 
+    {
+        System.out.println("grade a+");
+    }
+    
+}
+}
+    

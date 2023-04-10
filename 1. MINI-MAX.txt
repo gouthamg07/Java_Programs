@@ -1,0 +1,46 @@
+package tcpserverclient;
+import java.util.ArrayList;
+import static java.util.Collections.list;
+import java.util.List;
+
+public class Tcpserverclient
+{
+    public static void main(String[] args)
+    {
+      /*  List<Integer> arr=new ArrayList<>(5);
+         arr.add(1);
+        arr.add(2);
+        arr.add(3); 
+        arr.add(4);
+       arr.add(5);
+       arr.add(6);
+       System.out.println(arr);
+       System.out.println(arr.size());
+    int maxsum=arr.get(0),minsum =arr.get(0); */
+        List <Integer> arr = new ArrayList<Integer>();
+      arr.add(256741038);    
+        arr.add(623958417);
+        arr.add(467905213); 
+        arr.add(714532089);
+       arr.add(938071625);
+
+     long min = arr.get(0);
+    long max = arr.get(0);
+    long totalsum = 0;
+    for(int i=0;i<=4;i++)
+    {
+   
+        if(arr.get(i)<min) 
+            min = arr.get(i);
+        if(arr.get(i)>max)
+            max =arr.get(i);
+        totalsum += arr.get(i);
+    }
+    System.out.println(totalsum - min);
+     System.out.println(totalsum - max);
+    
+    
+    }
+       
+    }
+

@@ -1,0 +1,41 @@
+//pass by value and pass by reference
+package javaapplication26;
+public class JavaApplication26 {
+
+
+    public static void main(String[] args) {
+    /*
+        
+    int a = 25;
+    System.out.println("the value of a is : "  + a );
+    passbyvalue(a); 
+    System.out.println("the value of a is : "  + a );
+        
+    */
+        
+        int[] array = new int[2];
+        array[0] =100;
+        array[1]=200;
+        
+         System.out.println("the value of a is : "  + array[0] );
+         passbyreference(array); 
+         System.out.println("the value of a is : "  + array[0] );
+  }
+ /*  
+    public static void passbyvalue(int a)
+    {
+        System.out.println( "the value of a in method : " +a);
+        a = 59;
+        System.out.println( "the value of a in method after initilization: " +a);
+
+    }
+ */
+    public static void passbyreference(int[] a)
+    {
+    System.out.println( "the value of a in method : " +a[0]);
+        a[0] = 59;
+        System.out.println( "the value of a in method after initilization: " +a[0]);
+    }
+    
+ }
+    

@@ -1,0 +1,40 @@
+//check LCM of two numbers
+package javaapplication1;
+import java.util.Scanner;
+public class JavaApplication1 
+{
+    public static void main (String[] args)
+    {
+    Scanner sc = new Scanner(System.in);
+    System.out.println("enter  the first number");
+    int num1 = sc.nextInt();
+    System.out.println("enter  the second number");
+    int num2 = sc.nextInt();
+    /*
+    int lcm=0;
+    int max = (num1>num2)? num1:num2; 
+    for(int i = max;i<=num1*num2;i=i+max)
+    {
+        if(i%num1==0 && i%num2==0)
+        {
+            lcm = i;
+            break;
+        }
+    }
+    System.out.println(lcm);
+    */
+    //method 2 is find HCF and use LCM formula
+    int min = (num1<num2)? num1:num2;
+    int hcf=0,lcm;
+    for(int i = 1;i<min;i++)
+    {
+        if(num1%i==0&&num2%i==0)
+        {
+            hcf = i;
+        }
+    }
+    lcm = (num1*num2)/hcf;
+    System.out.println(lcm);
+ }
+}
+

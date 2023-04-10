@@ -1,0 +1,25 @@
+
+package javaapplication1;
+import java.util.Scanner;
+public class JavaApplication1 
+{
+   public static void main (String[] args)
+    {
+    int [] arr = {21,91,73,2,23,798,98} ;
+    int max = arr[0];
+    int len = arr.length;
+    for(int i = 1;i<len;i++)
+    {
+    if(arr[i]>max)
+    {
+      max = arr[i];
+    }
+    }
+    System.out.println("largest element is "+max);
+    
+    
+}
+}
+    
+
+

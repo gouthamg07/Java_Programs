@@ -1,0 +1,50 @@
+
+package crctest;
+
+import java.util.Scanner;
+
+
+public class Crctest 
+{
+    public static void main(String[] args)
+    {
+    Scanner sc = new Scanner(System.in);
+    System.out.println("enter the low number");
+    int low = sc.nextInt();
+    System.out.println("enter the high number");
+    int high = sc.nextInt();
+    armstrong( low, high);
+     
+    }
+    static void armstrong(int low ,int high)
+    {
+    for(int num =low;num<=high;num++)
+    {
+        int sum=0,temp,digit,len;
+        temp=num;
+        len = order(num);
+        
+        while(temp!=0)
+         {
+             digit = temp%10;
+             
+             sum = (int) (sum+Math.pow(digit, len));
+             temp = temp/10;
+         }
+        if(sum == num)
+            System.out.println(num + " ");
+    }
+    }
+    static int order(int num)
+    {   
+        int len = 0;
+        int temp=num;
+        while(temp!=0)
+        {
+        len++;
+        temp = temp/10;
+        }
+        return len;
+    }
+    
+}

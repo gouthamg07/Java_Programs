@@ -1,0 +1,45 @@
+//check if given number is armstrong or not
+package javaapplication1;
+import java.util.Scanner;
+public class JavaApplication1 
+{
+    public static void main (String[] args)
+    {
+    System.out.println("enter the number");
+    Scanner sc = new Scanner(System.in);
+    int num = sc.nextInt();
+    int len = order(num);
+    if(arm(num,len))
+    {
+    System.out.println("armstrong");
+    }
+    else
+    {
+        System.out.println("not armstrong");
+    }
+    }
+
+   static int order(int num) 
+   {
+        int len = 0;
+        while(num!=0)
+        {
+        len++;
+        num = num/10;
+        }
+        return len;
+   }
+   static boolean arm(int num , int len)
+   {
+      int sum=0,temp,digit;
+      temp=num;
+      len = order(num);
+      while(temp!=0)
+      {
+        digit = temp%10;
+        sum = (int) (sum+Math.pow(digit, len));
+        temp = temp/10;
+      }
+    return sum==num;
+   }
+}

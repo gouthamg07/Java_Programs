@@ -1,0 +1,26 @@
+//octal to decimal
+package javaapplication1;
+import java.util.Scanner;
+public class JavaApplication1 
+{
+    public static void main (String[] args)
+    {
+        int res=0 ;
+    Scanner sc = new Scanner(System.in);
+    System.out.println("enter the octal number");
+    String octal = sc.nextLine();
+   /* int base = 8,i=0;
+    long num = octal,digit;
+    while(num!=0)
+    {
+        digit = num%10;
+        res += (int) ((int) digit * Math.pow(8,i));
+        num /=10;
+        i++;
+    }
+       System.out.println(res);
+           */
+    System.out.println(Integer.parseInt(octal,8));
+ }
+}
+

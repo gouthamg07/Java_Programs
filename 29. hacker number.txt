@@ -1,0 +1,28 @@
+package tcpclienttest;
+
+
+public class Tcpclienttest
+{
+public static void main(String[] args)
+{
+int n =124;
+int t=n;
+int ld;
+int count =0;
+while(t>0)
+{
+ ld = t % 10;
+ if(ld!=0)
+ {
+  if(n%ld==0)
+  {
+       count++;
+  }
+ }
+t = t /10;
+}
+System.out.println(count);
+    
+}
+}
+

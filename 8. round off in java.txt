@@ -1,0 +1,18 @@
+
+package javaapplication26;
+
+import java.util.Scanner;
+
+
+public class JavaApplication26 {
+
+
+    public static void main(String[] args) {
+    Scanner sc = new Scanner(System.in);
+    System.out.println("enter the decimal");
+    float num = sc.nextFloat();
+    System.out.println(Math.round(num));
+    System.out.println(Math.floor(num));//round off to before number
+    System.out.println(Math.ceil(num));//round off to next 
+ }
+}
